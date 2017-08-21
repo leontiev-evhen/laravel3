@@ -39,20 +39,13 @@ class AuthController extends BaseController
 
             $remember = (Input::has('remember')) ? true : false;
 
-
-            if ( ! User::where('email', Input::get('email'))->first() )
-            {
-                return Redirect::to('auth/login')->withErrors(['loginError' =>  Lang::get('auth.email')]);
-            }
-
-            if ( ! User::where('password', Input::get('password'))->first() )
-            {
-                return Redirect::to('auth/login')->withErrors(['loginError' =>  Lang::get('auth.password')]);
-            }
-
             if (Auth::attempt($data, $remember))
             {
                 return Redirect::intended('/');
+            }
+            else
+            {
+                return Redirect::to('auth/login')->withErrors(['loginError' =>  Lang::get('auth.error')]);
             }
         }
         else

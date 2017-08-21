@@ -13,4 +13,5 @@ return [
 
 'email' => 'Email address not found',
 'password' => 'Incorrect password',
+'error' => 'Incorrect login'
 ];

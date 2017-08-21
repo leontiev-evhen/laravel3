@@ -5,7 +5,7 @@
 
     RewriteEngine On
     DirectoryIndex index.php
-    RewriteBase /~user11/tinyurl
+    RewriteBase /~user11/task3
     # Redirect Trailing Slashes...
     RewriteRule ^(.*)/$ /$1 [L,R=301]
 
