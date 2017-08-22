@@ -1,6 +1,6 @@
 @extends('layout')
 
 @section('content')
-        <p>Short Link: <a href="{{$link}}">{{$link}}</a></p>
+        <div class="col-md-6">Short Link: <a href="{{$link}}">{{$link}}</a></div>
 @stop
 

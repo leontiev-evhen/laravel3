@@ -40,7 +40,7 @@ class SignUpController extends BaseController
 
             if($validator->fails())
             {
-                return Redirect::to('signup/login')->withErrors($validator)->withInput();;
+                return Redirect::to('signup/login')->withErrors($validator)->withInput();
             }
 
             if ($this->_model->create())
